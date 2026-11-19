@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<!--
+  개인정보처리방침 게시용 페이지. docs/PRIVACY_POLICY.md 에서 만든다. 내용을 고칠 때는 두 파일을 함께 고친다.
+  게시 주소: https://jznpark.github.io/asset-manager/privacy.html (app/src/main/res/values/strings.xml 의 privacy_policy_url 과 같아야 한다).
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 · Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Noto Sans KR", sans-serif; line-height: 1.7; max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+  h1 { font-size: 1.6rem; margin-top: 2.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #8884; padding: .5rem .6rem; text-align: left; vertical-align: top; font-size: .95rem; }
+  code { font-size: .9em; word-break: break-all; }
+  .meta { color: #777; font-size: .95rem; }
+  nav a { margin-right: 1rem; }
+</style>
+</head>
+<body>
+<nav><a href="#ko">한국어</a><a href="#en">English</a></nav>
+
+<section id="ko" lang="ko">
+<h1>장기투자 나침반: 목표 비중 포트폴리오 개인정보처리방침</h1>
+<p class="meta">시행일: 2026-11-16</p>
+<h2>1. 요약</h2>
+<ul>
+<li>이 앱은 개발자가 운영하는 서버가 없습니다. 개발자는 사용자의 정보를 수집하거나 받아 보지 않습니다.</li>
+<li>입력한 자산 정보는 사용자의 기기 안에만 저장됩니다.</li>
+<li>시세와 종목 검색을 위해 종목코드와 검색어가 외부 시세 제공처로 전송됩니다. 보유 수량·금액·계좌 정보는 전송되지 않습니다.</li>
+<li>광고, 분석 도구, 로그인 기능이 없습니다.</li>
+</ul>
+<h2>2. 개발자가 수집하는 정보</h2>
+<p>없습니다. 앱은 개발자에게 어떤 정보도 보내지 않습니다.</p>
+<h2>3. 기기 안에만 저장되는 정보</h2>
+<p>아래 정보는 사용자가 입력하거나 앱이 계산해 기기의 앱 전용 저장 공간에 저장합니다. 외부로 전송하지 않습니다.</p>
+<ul>
+<li>소유자 이름(사용자가 붙인 호칭), 계좌별 보유 종목·수량·목표 비중, 예적금·채권 내역, 자산 기록(스냅샷), 재무 목표, 규칙서 설정</li>
+<li>환율·시세·시장 지표의 마지막 조회 값과 과거 시세 캐시</li>
+<li>앱 설정(테마, 표시 모드, 알림 사용 여부, 시세 갱신 주기 등)</li>
+<li>앱 잠금을 켠 경우 PIN의 해시값(PIN 원문은 저장하지 않습니다)</li>
+<li>공공데이터포털 인증키(데이터에 설정돼 있는 경우)</li>
+</ul>
+<p>저장 위치는 앱 전용 폴더이며 다른 앱이 읽을 수 없습니다. 파일 자체를 별도로 암호화하지는 않습니다. 기기의 클라우드 백업에는 포함되지 않습니다.</p>
+<p>생체 인증(지문·얼굴)은 기기의 운영체제가 처리합니다. 앱은 생체 정보를 받거나 저장하지 않고 인증 성공 여부만 전달받습니다.</p>
+<h2>4. 외부로 전송되는 정보</h2>
+<p>시세를 조회하거나 종목을 검색할 때 앱이 아래 제공처에 직접 요청을 보냅니다. 요청은 모두 HTTPS로 암호화됩니다.</p>
+<table>
+<tr><th>제공처</th><th>전송되는 내용</th><th>시점</th></tr>
+<tr><td>네이버 금융 (<code>m.stock.naver.com</code>, <code>api.stock.naver.com</code>, <code>ac.finance.naver.com</code>)</td><td>국내 종목코드, 종목 검색어</td><td>시세 갱신, 과거 시세 조회, 종목 검색</td></tr>
+<tr><td>Yahoo Finance (<code>query1.finance.yahoo.com</code>)</td><td>해외 종목 티커, 환율·지수 심볼, 종목 검색어</td><td>시세·환율·지수 갱신, 과거 시세 조회, 종목 검색</td></tr>
+<tr><td>공공데이터포털 (<code>apis.data.go.kr</code>)</td><td>국내 종목코드, 사용자의 공공데이터포털 인증키</td><td>인증키가 설정돼 있을 때의 국내 종가 조회</td></tr>
+</table>
+<ul>
+<li>인터넷 통신의 특성상 사용자의 IP 주소가 각 제공처에 전달됩니다.</li>
+<li>요청에는 일반적인 브라우저 형식의 User-Agent 문자열이 포함됩니다. 기기 식별자, 광고 ID, 계정 정보는 포함되지 않습니다.</li>
+<li>보유 수량, 평가 금액, 계좌 이름, 소유자 이름은 전송되지 않습니다.</li>
+<li>각 제공처가 요청 기록을 어떻게 다루는지는 해당 제공처의 개인정보처리방침을 따릅니다. </li>
+</ul>
+<h2>5. 제3자 제공, 광고, 분석 도구</h2>
+<p>개발자는 사용자의 정보를 보유하지 않으므로 제3자에게 제공하거나 판매하지 않습니다. 앱에는 광고와 사용 행태 분석 도구가 없습니다.</p>
+<h2>6. 파일 내보내기와 가져오기</h2>
+<p>사용자가 설정에서 "내보내기"를 실행하면 앱 데이터가 JSON 파일로 사용자가 고른 위치에 저장됩니다. 이 파일은 암호화되지 않으며 자산 내역(보유 수량과 금액)이 그대로 들어 있으므로 안전한 곳에 보관해야 합니다. 앱 잠금 설정(PIN 해시값 포함)과 공공데이터포털 인증키는 이 파일에 넣지 않습니다. 파일을 가져올 때에도 앱 잠금 설정은 바뀌지 않고 기기에 있던 설정이 그대로 유지됩니다. 앱은 이 파일을 어디에도 전송하지 않습니다.</p>
+<h2>7. 알림</h2>
+<p>리밸런싱일, 목표 비중 이탈, 예적금 만기 알림은 기기 안에서 만들어집니다. 알림을 위해 외부 서버와 통신하지 않습니다.</p>
+<h2>8. 보관 기간과 삭제</h2>
+<p>정보는 사용자가 지울 때까지 기기에 보관됩니다. 다음 방법으로 삭제할 수 있습니다.</p>
+<ul>
+<li>앱의 설정 → "정보 초기화"</li>
+<li>기기 설정에서 앱 데이터 삭제 또는 앱 삭제</li>
+</ul>
+<p>개발자는 사용자의 정보를 가지고 있지 않으므로 개발자에게 삭제를 요청할 대상 정보가 없습니다.</p>
+<h2>9. 권한</h2>
+<ul>
+<li>인터넷: 시세 조회와 종목 검색</li>
+<li>알림: 리밸런싱·만기 알림 표시(사용자가 허용한 경우)</li>
+<li>생체 인증: 앱 잠금 해제(사용자가 켠 경우)</li>
+</ul>
+<p>앱이 사용하는 라이브러리(백그라운드 작업 예약)가 네트워크 상태 확인, 기기 재시작 후 작업 재예약 등에 필요한 권한을 함께 선언합니다. 이 권한으로 개인정보를 수집하지 않습니다.</p>
+<h2>10. 아동</h2>
+<p>이 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 정보를 수집하지 않습니다. </p>
+<h2>11. 방침의 변경</h2>
+<p>방침이 바뀌면 이 페이지에 게시하고 시행일을 갱신합니다.</p>
+<h2>12. 문의</h2>
+<p>znpark@gmail.com</p>
+</section>
+
+<section id="en" lang="en">
+<h1>Asset Manager (자산관리) Privacy Policy</h1>
+<p class="meta">Effective date: 2026-11-16</p>
+<h2>1. Summary</h2>
+<ul>
+<li>This app has no server operated by the developer. The developer does not collect or receive your information.</li>
+<li>The asset information you enter is stored only on your device.</li>
+<li>To fetch prices and search for instruments, ticker codes and search terms are sent to third-party market data providers. Quantities, amounts and account details are never sent.</li>
+<li>There are no ads, no analytics tools and no sign-in.</li>
+</ul>
+<h2>2. Information collected by the developer</h2>
+<p>None. The app does not send any information to the developer.</p>
+<h2>3. Information stored only on your device</h2>
+<p>The following is entered by you or calculated by the app and stored in the app's private storage. It is not transmitted.</p>
+<ul>
+<li>Owner labels, holdings, quantities and target weights per account, deposits and bonds, asset snapshots, financial goals, and your investment policy settings</li>
+<li>The last fetched exchange rates, prices and market indicators, and a cache of historical prices</li>
+<li>App settings (theme, display mode, notifications, refresh interval, etc.)</li>
+<li>A hash of your PIN if app lock is enabled (the PIN itself is not stored)</li>
+<li>Your Korean Public Data Portal API key, if one is set in your data</li>
+</ul>
+<p>The storage location is private to the app and cannot be read by other apps. The file is not separately encrypted. It is excluded from device cloud backup.</p>
+<p>Biometric authentication (fingerprint or face) is handled by the operating system. The app never receives or stores biometric data, only whether authentication succeeded.</p>
+<h2>4. Information sent off your device</h2>
+<p>When fetching prices or searching for instruments, the app sends requests directly to the providers below. All requests use HTTPS.</p>
+<table>
+<tr><th>Provider</th><th>What is sent</th><th>When</th></tr>
+<tr><td>Naver Finance (<code>m.stock.naver.com</code>, <code>api.stock.naver.com</code>, <code>ac.finance.naver.com</code>)</td><td>Korean ticker codes, search terms</td><td>Price refresh, historical prices, instrument search</td></tr>
+<tr><td>Yahoo Finance (<code>query1.finance.yahoo.com</code>)</td><td>Overseas tickers, FX and index symbols, search terms</td><td>Price, FX and index refresh, historical prices, instrument search</td></tr>
+<tr><td>Korean Public Data Portal (<code>apis.data.go.kr</code>)</td><td>Korean ticker codes and your Public Data Portal API key</td><td>Closing price lookup when an API key is set</td></tr>
+</table>
+<ul>
+<li>As with any internet request, your IP address is visible to each provider.</li>
+<li>Requests include a generic browser-style User-Agent string. No device identifier, advertising ID or account information is included.</li>
+<li>Quantities, valuations, account names and owner labels are never sent.</li>
+<li>How each provider handles request logs is governed by that provider's own privacy policy. </li>
+</ul>
+<h2>5. Sharing, ads and analytics</h2>
+<p>The developer holds none of your information and therefore does not share or sell it. The app contains no ads and no usage analytics.</p>
+<h2>6. Export and import</h2>
+<p>When you run "Export" in Settings, your app data is saved as a JSON file to a location you choose. The file is not encrypted and contains your asset records (quantities and amounts) as they are, so keep it somewhere safe. App lock settings (including the PIN hash) and the Public Data Portal API key are not written to this file, and importing a file does not change the app lock settings on your device. The app does not send this file anywhere.</p>
+<h2>7. Notifications</h2>
+<p>Rebalancing, target-band and deposit maturity notifications are generated on the device. No external server is contacted for notifications.</p>
+<h2>8. Retention and deletion</h2>
+<p>Information stays on your device until you delete it. You can delete it by:</p>
+<ul>
+<li>Settings → "Reset data" in the app</li>
+<li>Clearing the app's data or uninstalling the app in device settings</li>
+</ul>
+<p>Because the developer holds none of your information, there is nothing for the developer to delete on request.</p>
+<h2>9. Permissions</h2>
+<ul>
+<li>Internet: price lookup and instrument search</li>
+<li>Notifications: rebalancing and maturity alerts (if you allow them)</li>
+<li>Biometrics: unlocking the app (if you enable it)</li>
+</ul>
+<p>A library used for background scheduling also declares permissions needed to check network state and reschedule work after reboot. These are not used to collect personal information.</p>
+<h2>10. Children</h2>
+<p>This app is not directed to children and does not collect children's information. </p>
+<h2>11. Changes</h2>
+<p>If this policy changes, the new version will be posted on this page with an updated effective date.</p>
+<h2>12. Contact</h2>
+<p>znpark@gmail.com</p>
+</section>
+</body>
+</html>
+
